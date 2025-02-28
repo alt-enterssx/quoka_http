@@ -62,3 +62,37 @@
 |**split**(std::string& str, char sym) | `std::vector<std::string>` | Splits a string into a vector (only for working with a generator) | `private` |
 |**getHeaderAsEn**(std::string& header) | `HttpRequest::HeaderType` | Based on the string returns HeaderType | `private` |
 |**getMethodAsEn**(std::string& method) | `HttpRequest::MethodType` | Based on the string returns MethodType | `private` |
+
+#### Response Class
+
+```
+  #include "./HttpResponse/HttpResponse.h"
+```
+
+| Method | Type     | Description                | Access |
+| :-------- | :------- | :------------------------- | :------|
+|**generateResponse**(HttpResponse::Response& resp) | `std::string` | Generates a response to send to the client | `public` |
+|**getStatusAsStr**(HttpResponse::StatusType& type) | `std::string` | Сonverts object HttpResponse::StatusType to string | `private` |
+|**getHeaderAsStr**(HeaderType& type) | `std::string` | Сonverts object HttpResponse::HeaderType to string | `private` |
+
+#### Logger Class
+
+```
+  #include "./HttpLogger/HttpLogger.h"
+```
+
+| Method | Type     | Description                | Access |
+| :-------- | :------- | :------------------------- | :------|
+|**log**(const std::string& logStr, LoggerType type) | `void` | Sends log to console taking into account enum and string | `public` |
+
+#### Confih Class
+
+```
+  #include "./ServerProperties/ServerProperties.h"
+```
+
+| Method | Type     | Description                | Access |
+| :-------- | :------- | :------------------------- | :------|
+|**ServerProperties**() | `constructor` | Empty constructor for config | `public` |
+|**setFile**(std::ifstream& fileR) | `void` | Accepts a .prop file to read its values | `public` |
+|**getProperty**(const std::string& str) | `std::string` | Gets a value from memory | `public` |
