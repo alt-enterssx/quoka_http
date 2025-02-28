@@ -2,9 +2,10 @@
 ## Quoka Library
 
 The Quoka library is designed for building web servers that provide HTTP APIs with request handling and response generation capabilities. It includes components for working with HTTP requests and responses, routing requests, logging, and managing server configurations.
-## API Reference
 
 ![Logo](./img/placeholder.png)
+
+## API Reference
 
 #### Launcher Class
 
