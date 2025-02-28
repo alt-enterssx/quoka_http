@@ -1,4 +1,7 @@
 
+## Quoka Library
+
+The Quoka library is designed for building web servers that provide HTTP APIs with request handling and response generation capabilities. It includes components for working with HTTP requests and responses, routing requests, logging, and managing server configurations.
 ## API Reference
 
 #### Launcher Class
@@ -6,6 +9,8 @@
 ```
   #include "./HttpLauncher/HttpLauncher.h"
 ```
+
+> The HttpLauncher class initializes and starts an HTTP server on a specified port (default: 8080). It sets up network resources using Winsock, creates a listening socket, and handles incoming connections. It also logs server information and errors. The class provides methods for getting and setting the server port, and throws exceptions (HttpException) for any setup issues.
 
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
