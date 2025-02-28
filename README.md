@@ -29,6 +29,8 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
   #include "./HttpListener/HttpListener.h"
 ```
 
+>The HttpListener class handles incoming client connections, receives HTTP requests, and routes them for processing. It manages socket operations, including accepting connections, reading request data, and handling errors. The class uses a configurable buffer for receiving data and integrates with the HttpRouter to process and respond to requests. It also logs errors and ensures proper cleanup of resources after usage.
+
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
 |**HttpListener**(SOCKET& lSock) | `constructor` | Constructor your listener with port | `public` |
@@ -41,6 +43,8 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 ```
   #include "./HttpRouter/HttpRouter.h"
 ```
+
+>The HttpRouter class is responsible for handling different HTTP methods (GET, POST, PUT, HEAD, DELETE) for specified URLs. It routes requests to appropriate functions and manages these routes in a static map. If a route is found, it sends the corresponding response; otherwise, it sends a default response.
 
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
@@ -57,6 +61,9 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 ```
   #include "./HttpRequest/HttpRequest.h"
 ```
+
+>The HttpRequest class handles HTTP requests. It has enumerations for HTTP methods (GET, POST, PUT, HEAD, DELETE) and header types (e.g., ACCEPT, CONTENT_TYPE, HOST). There are also structures for headers and request bodies, supporting various data formats (JSON, HTML, text).
+The class implements parsing of a request string into a Request structure, as well as conversion between methods and headers from strings to enumerations.
 
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
@@ -86,15 +93,19 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
   #include "./HttpLogger/HttpLogger.h"
 ```
 
+>The HttpResponse class handles HTTP response generation. It includes enumerations for HTTP response statuses (e.g., OK, NOT_FOUND, INTERNAL_SERVER_ERROR) and header types (e.g., CONTENT_TYPE, LOCATION, SERVER). The class also defines body types (JSON, HTML, IMG) and provides a method for generating an HTTP response string from a Response structure.
+
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
 |**log**(const std::string& logStr, LoggerType type) | `void` | Sends log to console taking into account enum and string | `public` |
 
-#### Confih Class
+#### Config Class
 
 ```
   #include "./ServerProperties/ServerProperties.h"
 ```
+
+>The ServerProperties class loads configuration settings from a file and stores them in a static map. It provides methods to read the file and retrieve properties by their key. If the file can't be opened, it throws an exception.
 
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
