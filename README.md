@@ -7,7 +7,7 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 
 ## API Reference
 
-#### Launcher Class
+### Launcher Class
 
 ```
   #include "./HttpLauncher/HttpLauncher.h"
@@ -41,7 +41,7 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
     }
 ```
 
-#### Listener Class
+### Listener Class
 
 ```
   #include "./HttpListener/HttpListener.h"
@@ -56,7 +56,7 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 |**listen**() | `void` | Start accepting requests from a socket | `public` |
 |**close**() | `void` | Stop accepting requests from a socket | `public` |
 
-#### Router Class
+### Router Class
 
 ```
   #include "./HttpRouter/HttpRouter.h"
@@ -74,7 +74,7 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 | **HEAD_M**(const std::string& url, HttpResponse::Response(*func)(HttpRequest::Request)) | `constructor` | Adds the implementation function to the router's memory with the method HEAD | `public`
 | **DELETE_M**(const std::string& url, HttpResponse::Response(*func)(HttpRequest::Request)) | `constructor` | Adds the implementation function to the router's memory with the method DELETE | `public`
 
-#### Request Class
+### Request Class
 
 ```
   #include "./HttpRequest/HttpRequest.h"
@@ -93,7 +93,7 @@ The class implements parsing of a request string into a Request structure, as we
 |**getHeaderAsEn**(std::string& header) | `HttpRequest::HeaderType` | Based on the string returns HeaderType | `private` |
 |**getMethodAsEn**(std::string& method) | `HttpRequest::MethodType` | Based on the string returns MethodType | `private` |
 
-#### Response Class
+### Response Class
 
 ```
   #include "./HttpResponse/HttpResponse.h"
@@ -105,7 +105,7 @@ The class implements parsing of a request string into a Request structure, as we
 |**getStatusAsStr**(HttpResponse::StatusType& type) | `std::string` | Сonverts object HttpResponse::StatusType to string | `private` |
 |**getHeaderAsStr**(HeaderType& type) | `std::string` | Сonverts object HttpResponse::HeaderType to string | `private` |
 
-#### Logger Class
+### Logger Class
 
 ```
   #include "./HttpLogger/HttpLogger.h"
@@ -117,7 +117,7 @@ The class implements parsing of a request string into a Request structure, as we
 | :-------- | :------- | :------------------------- | :------|
 |**log**(const std::string& logStr, LoggerType type) | `void` | Sends log to console taking into account enum and string | `public` |
 
-#### Config Class
+### Config Class
 
 ```
   #include "./ServerProperties/ServerProperties.h"
