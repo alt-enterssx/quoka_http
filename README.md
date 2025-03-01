@@ -76,7 +76,7 @@ The class implements parsing of a request string into a Request structure, as we
 |**parseRequest**(std::string& str) | `HttpRequest::Request` | Creates a request object based on a common query string | `public` |
 |**getMethodAsStr**(HttpRequest::MethodType type) | `std::string` | Converts the object HttpRequest::MethodType to a string | `public` |
 |**getMethodAsStr**(HttpRequest::MethodType type) | `std::string` | Converts the object HttpRequest::MethodType to a string | `public` |
-|**getHeader**(std::vector<Header> headers, HeaderType type) | `HttpRequest::Header` | Looking for a title to work with | `public` |
+|**getHeader**(std::vector<HttpRequest::Header> headers, HeaderType type) | `HttpRequest::Header` | Looking for a title to work with | `public` |
 |**split**(std::string& str, char sym) | `std::vector<std::string>` | Splits a string into a vector (only for working with a generator) | `private` |
 |**getHeaderAsEn**(std::string& header) | `HttpRequest::HeaderType` | Based on the string returns HeaderType | `private` |
 |**getMethodAsEn**(std::string& method) | `HttpRequest::MethodType` | Based on the string returns MethodType | `private` |
@@ -91,7 +91,7 @@ The class implements parsing of a request string into a Request structure, as we
 | :-------- | :------- | :------------------------- | :------|
 |**generateResponse**(HttpResponse::Response& resp) | `std::string` | Generates a response to send to the client | `public` |
 |**getStatusAsStr**(HttpResponse::StatusType& type) | `std::string` | Сonverts object HttpResponse::StatusType to string | `private` |
-|**getHeaderAsStr**(HeaderType& type) | `std::string` | Сonverts object HttpResponse::HeaderType to string | `private` |
+|**getHeaderAsStr**(HttpResponse::HeaderType& type) | `std::string` | Сonverts object HttpResponse::HeaderType to string | `private` |
 
 ### Logger Class
 
