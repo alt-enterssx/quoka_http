@@ -5,6 +5,9 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 
 ![Logo](./img/placeholder.png)
 
+## Support creativity
+[![Donation Alerts](https://img.shields.io/badge/Donation%20Alerts-F7DF1E?style=for-the-badge&logo=paypal&logoColor=white&color=yellow)](https://www.donationalerts.com/r/altenter)
+
 ## API Reference
 
 ### Launcher Class
