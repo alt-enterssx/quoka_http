@@ -3,7 +3,7 @@
 
 The Quoka library is designed for building web servers that provide HTTP APIs with request handling and response generation capabilities. It includes components for working with HTTP requests and responses, routing requests, logging, and managing server configurations.
 
-![Logo](./img/placeholder.png)
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 ## API Reference
 
@@ -25,6 +25,16 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 | **setPort**(int port) | `void` | Set server port | `public` |
 | **launch**() | `void` | Launches the database to work with the server | `public` |
 | **getIp**(sockaddr& addr) | `std::string` | Get IP of running server | `private` |
+
+```c++
+    try {
+        HttpLauncher launcher(9090);
+        launcher.launch();
+    } catch(HttpException& ex) {
+        std::string err = ex.what();
+        HttpLogger::log(err, HttpLogger::LoggerType::ERR);
+    }
+```
 
 #### Listener Class
 
