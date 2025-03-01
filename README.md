@@ -26,8 +26,9 @@ The Quoka library is designed for building web servers that provide HTTP APIs wi
 | **launch**() | `void` | Launches the database to work with the server | `public` |
 | **getIp**(sockaddr& addr) | `std::string` | Get IP of running server | `private` |
 
+#### Reference
+
 ```c++
-    //Reference HttpLaucnher Class
     try {
         //Create an object named launcher and set the port to 9090
         HttpLauncher launcher(9090);
