@@ -118,3 +118,15 @@ The class implements parsing of a request string into a Request structure, as we
 |**ServerProperties**() | `constructor` | Empty constructor for config | `public` |
 |**setFile**(std::ifstream& fileR) | `void` | Accepts a .prop file to read its values | `public` |
 |**getProperty**(const std::string& str) | `std::string` | Gets a value from memory | `public` |
+
+### Reader Class
+
+```
+  #include "./HtmlReader/HtmlReader.h"
+```
+
+>The HtmlReader class is responsible for reading the contents of an HTML file. It ensures that the provided file has a .html extension before processing. The class reads the file line by line and concatenates its contents into a single string, which is then returned. If the file extension is not .html, it throws an exception.
+
+| Method        | Type          | Description                          | Access  |
+|--------------|--------------|--------------------------------------|--------|
+| **readFile**(HttpFileWrapper&& wrapper) | `std::string` | Reads and returns HTML file content. Throws if not HTML. | `public` |
