@@ -25,26 +25,7 @@ void HttpLauncher::launch() {
 
 		std::cout << portProp << '\n';
 
-		if (portProp != "") {
-			int res = 0;
-			__asm {
-				xor eax, eax
-				mov esi, portProp
-			
-			atoi_loop:
-				movzx ecx, byte ptr[esi]
-					test ecx, ecx
-					je atoi_done
-					sub ecx, '0'
-					imul eax, eax, 10
-					add eax, ecx
-					inc esi
-					jmp atoi_loop
-			atoi_done:
-			}
-
-			this->port = res;
-		}
+		if (portProp != "") { this->port = std::stoi(portProp); }
 		else { this->port = DEFAULT_PORT; }
 
 	}
