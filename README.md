@@ -116,7 +116,7 @@ The class implements parsing of a request string into a Request structure, as we
 | Method | Type     | Description                | Access |
 | :-------- | :------- | :------------------------- | :------|
 |**ServerProperties**() | `constructor` | Empty constructor for config | `public` |
-|**setFile**(std::ifstream& fileR) | `void` | Accepts a .prop file to read its values | `public` |
+|**setFile**(HttpFileWrapper&& wrapper) | `void` | Accepts a .prop file to read its values | `public` |
 |**getProperty**(const std::string& str) | `std::string` | Gets a value from memory | `public` |
 
 ### Reader Class
